@@ -1,0 +1,14 @@
+<!-- {% extends "tasks/layout.html" % } -->
+
+{% block body %}
+
+    <h1>Welcome to my Librey</h1>
+    <h3>{{intro}}</h3>
+    <ul>
+        {% for book in tasks %}
+            <li>{{book}}</li>
+        {%endfor%}
+    </ul>
+    <a href="{%url 'tasks:added'%}">Add tasks</a>
+    
+{% endblock %}

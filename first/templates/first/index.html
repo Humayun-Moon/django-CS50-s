@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is the home page of my website</title>
+    <link href="{% static 'first/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="home">
+        <h1>Hello World's</h1>
+        <h1>Welcome to my Personal Blog's</h1>
+    </div>
+    <div class="favorite">
+        <h2>{{ intro }}</h2>
+        <ul>
+            {% for i in favourite %}
+                <li>{{i}}</li>
+                {%endfor%}
+        </ul>
+    </div>
+    
+</body>
+</html>
